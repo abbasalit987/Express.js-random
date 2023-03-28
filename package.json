@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "name": "express.js-random",
+  "version": "1.0.0",
+  "description": "express js sample script",
+  "main": "app.js",
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "nodemon app.js",
+    "start-server": "node app.js"
+  },
+  "author": "Abbas Ali",
+  "license": "ISC"
+}
