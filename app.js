@@ -5,6 +5,8 @@ const shopRouter = require('./routes/shop');
 const contactusRouter = require('./routes/contactus');
 const successRouter = require('./routes/success');
 
+const errorController = require('./controllers/error');
+
 const bodyParser = require('body-parser');
 
 const app = express();
@@ -16,8 +18,6 @@ app.use('/shop',shopRouter);
 app.use(contactusRouter);
 app.use(successRouter);
 
-app.use((req, res, next) => {
-    res.status(404).send('<h1>Error 404 : Page Not Found</h1>');
-})
+app.use(errorController.getErrorPage);
 
 app.listen(4000);
